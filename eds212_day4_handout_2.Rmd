@@ -1,0 +1,47 @@
+---
+title: "eds212_day4_handout_2"
+author: "Adelaide Robinson"
+date: '2022-08-04'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(skimr)
+library(GGally)
+```
+
+```{r}
+#explore the diamonds dataset
+names(diamonds)
+dim(diamonds)
+summary(diamonds)
+head(diamonds)
+tail(diamonds)
+skimr::skim(diamonds)
+```
+
+```{r, eval=FALSE}
+#create a pairs plot
+
+ggpairs(data = diamonds)
+```
+
+#Diamonds Scatter Plot
+```{r}
+   ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point()
+```
+
+
+#histogram 
+```{r}
+ggplot(data = diamonds, aes(x = carat)) + geom_histogram()
+```
+
+```{r}
+ggplot(data = diamonds, aes(x = clarity, y = price)) + geom_jitter()
+       
+```
+
+
