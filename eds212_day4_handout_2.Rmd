@@ -30,17 +30,17 @@ ggpairs(data = diamonds)
 
 #Diamonds Scatter Plot
 ```{r}
-   ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point()
+   ggplot(data = diamonds, aes(x = carat, y = price)) + geom_point() +labs(title = "Price and Carats in diamonds", x = "Carats", y = "Price")
 ```
 
 
 #histogram 
 ```{r}
-ggplot(data = diamonds, aes(x = carat)) + geom_histogram()
+ggplot(data = diamonds, aes(x = carat)) + geom_histogram() + labs(Title = "Diamond Carats") + aes(fill = clarity)
 ```
 
 ```{r}
-ggplot(data = diamonds, aes(x = clarity, y = price)) + geom_jitter()
+ggplot(data = diamonds, aes(x = clarity, y = price)) + geom_jitter()+theme_classic()
        
 ```
 
